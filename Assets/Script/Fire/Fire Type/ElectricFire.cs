@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OrganicFire : Fire
+public class ElectricFire : Fire
 {
     protected override void Start()
     {
-        fireType = FireType.Organic;
+        fireType = FireType.Electric;
         hp = 100f; // Set the default HP here
         base.Start();
     }
