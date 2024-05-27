@@ -7,7 +7,7 @@ public class GasFire : Fire
     protected override void Start()
     {
         fireType = FireType.Gas;
-        hp = 100f; // Set the default HP here
+        //hp = 100f; // Set the default HP here
         base.Start();
     }
 

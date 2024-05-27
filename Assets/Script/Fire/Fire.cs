@@ -7,7 +7,8 @@ public enum FireType
     Organic,
     Electric,
     Chemical,
-    Gas
+    Gas,
+    Liquid
 }
 
 public class Fire : MonoBehaviour
@@ -24,13 +25,16 @@ public class Fire : MonoBehaviour
                 hp = 100f;
                 break;
             case FireType.Electric:
-                hp = 80f;
+                hp = 100f;
                 break;
             case FireType.Chemical:
-                hp = 120f;
+                hp = 100f;
                 break;
             case FireType.Gas:
-                hp = 90f;
+                hp = 100f;
+                break;
+            case FireType.Liquid:
+                hp = 100f;
                 break;
         }
     }
@@ -48,16 +52,19 @@ public class Fire : MonoBehaviour
         switch (fireType)
         {
             case FireType.Organic:
-                finalDamage = (damageType == DamageType.Effective) ? damage * 1.5f : damage * 0.5f;
+                finalDamage = (damageType == DamageType.Effective) ? damage * 1f : damage * 0.5f;
                 break;
             case FireType.Electric:
-                finalDamage = (damageType == DamageType.Effective) ? damage * 2f : damage * 0.5f;
+                finalDamage = (damageType == DamageType.Effective) ? damage * 1f : damage * 0.5f;
                 break;
             case FireType.Chemical:
-                finalDamage = (damageType == DamageType.Effective) ? damage * 1.2f : damage * 0.8f;
+                finalDamage = (damageType == DamageType.Effective) ? damage * 1f : damage * 0.5f;
                 break;
             case FireType.Gas:
-                finalDamage = (damageType == DamageType.Effective) ? damage * 1.8f : damage * 0.6f;
+                finalDamage = (damageType == DamageType.Effective) ? damage * 1f : damage * 0.5f;
+                break;
+            case FireType.Liquid:
+                finalDamage = (damageType == DamageType.Effective) ? damage * 1f : damage * 0.5f;
                 break;
         }
 
