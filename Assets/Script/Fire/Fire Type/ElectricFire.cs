@@ -7,7 +7,7 @@ public class ElectricFire : Fire
     protected override void Start()
     {
         fireType = FireType.Electric;
-        hp = 100f; // Set the default HP here
+        //hp = 100f; // Set the default HP here
         base.Start();
     }
 

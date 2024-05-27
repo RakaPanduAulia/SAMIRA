@@ -5,25 +5,25 @@ using UnityEngine.InputSystem;
 
 public class FireTestController : MonoBehaviour
 {
-    public OrganicFire organicFire; // Assign this in the inspector or find it in Start method
+    public ElectricFire electricFire; // Assign this in the inspector or find it in Start method
     public InputActionReference damageEffectiveAction;
     public InputActionReference damageIneffectiveAction;
 
     void Start()
     {
-        if (organicFire == null)
+        if (electricFire == null)
         {
             // Try to find the OrganicFire component in the scene
-            organicFire = FindObjectOfType<OrganicFire>();
+            electricFire = FindObjectOfType<ElectricFire>();
         }
 
-        if (organicFire == null)
+        if (electricFire == null)
         {
             Debug.LogError("OrganicFire component not found in the scene.");
         }
         else
         {
-            Debug.Log("Initial HP: " + organicFire.hp);
+            Debug.Log("Initial HP: " + electricFire.hp);
         }
 
         damageEffectiveAction.action.performed += OnEffectiveDamage;
@@ -44,19 +44,19 @@ public class FireTestController : MonoBehaviour
 
     private void OnEffectiveDamage(InputAction.CallbackContext context)
     {
-        if (organicFire == null) return;
+        if (electricFire == null) return;
 
         // Apply effective damage
-        organicFire.TakeDamage(20f, DamageType.Effective);
-        Debug.Log("HP after effective damage: " + organicFire.hp);
+        electricFire.TakeDamage(20f, DamageType.Effective);
+        Debug.Log("HP after effective damage: " + electricFire.hp);
     }
 
     private void OnIneffectiveDamage(InputAction.CallbackContext context)
     {
-        if (organicFire == null) return;
+        if (electricFire == null) return;
 
         // Apply ineffective damage
-        organicFire.TakeDamage(20f, DamageType.Ineffective);
-        Debug.Log("HP after ineffective damage: " + organicFire.hp);
+        electricFire.TakeDamage(20f, DamageType.Ineffective);
+        Debug.Log("HP after ineffective damage: " + electricFire.hp);
     }
 }

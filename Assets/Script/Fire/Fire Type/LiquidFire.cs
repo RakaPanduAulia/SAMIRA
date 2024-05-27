@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChemicalFire : Fire
+public class LiquidFire : Fire
 {
     protected override void Start()
     {
-        fireType = FireType.Chemical;
+        fireType = FireType.Liquid;
         //hp = 100f; // Set the default HP here
         base.Start();
     }
