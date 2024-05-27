@@ -23,7 +23,7 @@ public class Particle : MonoBehaviour
         spawnAction.action.canceled -= OnSpawnCanceled;
     }
 
-    private void OnSpawnStarted(InputAction.CallbackContext context)
+    protected virtual void OnSpawnStarted(InputAction.CallbackContext context)
     {
         if (!foamParticleSystem.isPlaying)
         {
@@ -31,7 +31,7 @@ public class Particle : MonoBehaviour
         }
     }
 
-    private void OnSpawnCanceled(InputAction.CallbackContext context)
+    protected virtual void OnSpawnCanceled(InputAction.CallbackContext context)
     {
         if (foamParticleSystem.isPlaying)
         {
