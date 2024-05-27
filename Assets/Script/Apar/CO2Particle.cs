@@ -1,7 +1,8 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
-public class FoamParticle : Particle
+public class CO2Particle : Particle
 {
     public Transform leftController; // Referensi ke transform controller kiri
     private Vector3 initialPositionOffset;
@@ -49,8 +50,12 @@ public class FoamParticle : Particle
             // Tentukan jenis damage berdasarkan jenis api (fireType)
             switch (fire.fireType)
             {
+                case FireType.Electric:
+                    damageType = DamageType.Effective;
+                    damageAmount = effectiveDamage;
+                    break;
                 //Butuh 1 lagi buat yg efektif terhadap api liquid
-                case FireType.Organic:
+                case FireType.Gas:
                     damageType = DamageType.Ineffective;
                     damageAmount = ineffectiveDamage;
                     break;
