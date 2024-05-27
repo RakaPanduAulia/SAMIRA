@@ -8,6 +8,7 @@ public class WaterParticle : Particle
     private Vector3 initialPositionOffset;
     public float effectiveDamage = 10f;
     public float ineffectiveDamage = 5f;
+    public float veryIneffectiveDamage = 2.5f;
 
     private void Start()
     {

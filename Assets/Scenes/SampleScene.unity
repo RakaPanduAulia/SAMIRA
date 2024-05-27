@@ -259,7 +259,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4926193278562095643, guid: 8b2e382dd5edcd44a8f62f47d535281d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.5599998
+      value: 1.734
       objectReference: {fileID: 0}
     - target: {fileID: 4926193278562095643, guid: 8b2e382dd5edcd44a8f62f47d535281d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -771,7 +771,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1533138625715334, guid: 61bb62591466c3649bdf4905822d72f6, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4363000815121756, guid: 61bb62591466c3649bdf4905822d72f6, type: 3}
       propertyPath: m_LocalScale.x
@@ -1081,6 +1081,7 @@ MonoBehaviour:
   leftController: {fileID: 1109407790274764221}
   effectiveDamage: 10
   ineffectiveDamage: 5
+  veryIneffectiveDamage: 2.5
 --- !u!198 &611595957 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 198124144702787664, guid: 61bb62591466c3649bdf4905822d72f6, type: 3}
@@ -1326,7 +1327,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 20726739823198222, guid: b67ac199fe577454bacd120adf92c4d3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.44000015
+      value: -0.639
       objectReference: {fileID: 0}
     - target: {fileID: 20726739823198222, guid: b67ac199fe577454bacd120adf92c4d3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1567,7 +1568,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1525439452647444232, guid: 5852308dd1ee561438f7666b5d7e86cc, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1773065087259834159, guid: 5852308dd1ee561438f7666b5d7e86cc, type: 3}
       propertyPath: m_Layer
@@ -1794,6 +1795,7 @@ MonoBehaviour:
   leftController: {fileID: 1109407790274764221}
   effectiveDamage: 10
   ineffectiveDamage: 5
+  veryIneffectiveDamage: 2.5
 --- !u!114 &1260863169 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7753147258609537286, guid: 8a3826b29567e6044a95e79d38cce36c, type: 3}
@@ -2609,7 +2611,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5855597689672894720, guid: 30e02539b94a75a48988168797816bec, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.5599998
+      value: 0.521
       objectReference: {fileID: 0}
     - target: {fileID: 5855597689672894720, guid: 30e02539b94a75a48988168797816bec, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2836,7 +2838,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1265841317411286741, guid: b81d4f248a4aa1248a91def8020b5377, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.32
+      value: -1.778
       objectReference: {fileID: 0}
     - target: {fileID: 1265841317411286741, guid: b81d4f248a4aa1248a91def8020b5377, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3409,6 +3411,7 @@ MonoBehaviour:
   leftController: {fileID: 1109407790274764221}
   effectiveDamage: 10
   ineffectiveDamage: 5
+  veryIneffectiveDamage: 2.5
 --- !u!4 &1862733833 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1265841317411286741, guid: b81d4f248a4aa1248a91def8020b5377, type: 3}
@@ -4453,7 +4456,7 @@ PrefabInstance:
       objectReference: {fileID: 1109407790274764221}
     - target: {fileID: 321360698749390458, guid: de5ebec557582c0408ff955c49d555c7, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 490647614176871084, guid: de5ebec557582c0408ff955c49d555c7, type: 3}
       propertyPath: CollisionModule.collidesWith.m_Bits

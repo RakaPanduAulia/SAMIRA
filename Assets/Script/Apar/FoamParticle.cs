@@ -8,6 +8,7 @@ public class FoamParticle : Particle
 
     public float effectiveDamage = 10f;
     public float ineffectiveDamage = 5f;
+    public float veryIneffectiveDamage = 2.5f;
 
     private void Start()
     {
@@ -49,10 +50,13 @@ public class FoamParticle : Particle
             // Tentukan jenis damage berdasarkan jenis api (fireType)
             switch (fire.fireType)
             {
-                //Butuh 1 lagi buat yg efektif terhadap api liquid
+                case FireType.Liquid:
+                    damageType = DamageType.Effective;
+                    damageAmount = effectiveDamage;
+                    break;
                 case FireType.Organic:
-                    damageType = DamageType.Ineffective;
-                    damageAmount = ineffectiveDamage;
+                    damageType = DamageType.VeryIneffective;
+                    damageAmount = veryIneffectiveDamage;
                     break;
                 default:
                     Debug.Log("No damage applied to fire type: " + fire.fireType);
