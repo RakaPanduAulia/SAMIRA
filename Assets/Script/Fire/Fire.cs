@@ -2,6 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum DamageType
+{
+    Effective,
+    Ineffective,
+    VeryIneffective
+}
+
 public enum FireType
 {
     Organic,
@@ -52,19 +59,19 @@ public class Fire : MonoBehaviour
         switch (fireType)
         {
             case FireType.Organic:
-                finalDamage = (damageType == DamageType.Effective) ? damage * 1f : damage * 0.5f;
+                finalDamage = ModifyDamageForType(damage, damageType);
                 break;
             case FireType.Electric:
-                finalDamage = (damageType == DamageType.Effective) ? damage * 1f : damage * 0.5f;
+                finalDamage = ModifyDamageForType(damage, damageType);
                 break;
             case FireType.Chemical:
-                finalDamage = (damageType == DamageType.Effective) ? damage * 1f : damage * 0.5f;
+                finalDamage = ModifyDamageForType(damage, damageType);
                 break;
             case FireType.Gas:
-                finalDamage = (damageType == DamageType.Effective) ? damage * 1f : damage * 0.5f;
+                finalDamage = ModifyDamageForType(damage, damageType);
                 break;
             case FireType.Liquid:
-                finalDamage = (damageType == DamageType.Effective) ? damage * 1f : damage * 0.5f;
+                finalDamage = ModifyDamageForType(damage, damageType);
                 break;
         }
 
@@ -72,6 +79,21 @@ public class Fire : MonoBehaviour
         if (hp <= 0)
         {
             Destroy(gameObject);
+        }
+    }
+
+    private float ModifyDamageForType(float damage, DamageType damageType)
+    {
+        switch (damageType)
+        {
+            case DamageType.Effective:
+                return damage * 1f;
+            case DamageType.Ineffective:
+                return damage * 0.5f;
+            case DamageType.VeryIneffective:
+                return damage * 0.25f;
+            default:
+                return damage;
         }
     }
 }
