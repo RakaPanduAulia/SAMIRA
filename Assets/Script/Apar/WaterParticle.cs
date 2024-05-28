@@ -1,14 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class WaterParticle : Particle
 {
     public Transform leftController; // Referensi ke transform controller kiri
     private Vector3 initialPositionOffset;
+
     public float effectiveDamage = 10f;
     public float ineffectiveDamage = 5f;
     public float veryIneffectiveDamage = 2.5f;
+
+    private ParticleIndicator usageIndicator;
+    private bool isSpawning = false; // Menyimpan status apakah partikel sedang dikeluarkan
+    private bool isLocked = false; // Menyimpan status apakah partikel terkunci (tidak bisa digunakan)
+    private bool wasUsingParticle = false; // Menyimpan status apakah partikel baru saja digunakan
 
     private void Start()
     {
@@ -16,6 +21,13 @@ public class WaterParticle : Particle
         {
             // Simpan offset posisi awal antara objek dan controller kiri
             initialPositionOffset = transform.position - leftController.position;
+        }
+
+        // Cari ParticleIndicator di scene
+        usageIndicator = FindObjectOfType<ParticleIndicator>();
+        if (usageIndicator == null)
+        {
+            Debug.LogError("ParticleIndicator tidak ditemukan di scene.");
         }
     }
 
@@ -27,6 +39,64 @@ public class WaterParticle : Particle
             // Mengikuti posisi controller kiri dengan mempertahankan offset awal
             transform.position = leftController.position + initialPositionOffset;
         }
+
+        // Berhenti mengeluarkan partikel jika indikator penggunaan habis
+        if (isSpawning && usageIndicator != null && usageIndicator.CurrentUsage <= 0)
+        {
+            StopParticle();
+            isLocked = true; // Kunci partikel ketika indikator mencapai nol
+        }
+
+        // Cek apakah indikator sudah penuh dan buka kunci jika tidak sedang ditekan
+        if (isLocked && usageIndicator != null && usageIndicator.CurrentUsage >= usageIndicator.maxUsage && !isSpawning)
+        {
+            isLocked = false;
+        }
+
+        // Pastikan indikator tidak berkurang jika tidak sedang menggunakan partikel
+        if (!isSpawning && wasUsingParticle && usageIndicator != null)
+        {
+            usageIndicator.StopUsingParticle();
+            wasUsingParticle = false;
+        }
+    }
+
+    protected override void OnSpawnStarted(InputAction.CallbackContext context)
+    {
+        if (isLocked)
+        {
+            // Tidak memulai partikel jika terkunci
+            return;
+        }
+
+        if (usageIndicator != null && usageIndicator.StartUsingParticle())
+        {
+            StartParticle();
+            wasUsingParticle = true;
+        }
+    }
+
+    protected override void OnSpawnCanceled(InputAction.CallbackContext context)
+    {
+        StopParticle();
+    }
+
+    private void StartParticle()
+    {
+        if (!foamParticleSystem.isPlaying)
+        {
+            foamParticleSystem.Play();
+            isSpawning = true;
+        }
+    }
+
+    private void StopParticle()
+    {
+        if (foamParticleSystem.isPlaying)
+        {
+            foamParticleSystem.Stop();
+            isSpawning = false;
+        }
     }
 
     private void OnParticleCollision(GameObject other)
@@ -36,13 +106,13 @@ public class WaterParticle : Particle
             return;
         }
 
-        Debug.Log("Particle collided with: " + other.name);
+        Debug.Log("Particle bertabrakan dengan: " + other.name);
 
         // Cek apakah objek yang bertabrakan memiliki komponen Fire
         Fire fire = other.GetComponent<Fire>();
         if (fire != null)
         {
-            Debug.Log("Fire component detected on: " + other.name);
+            Debug.Log("Komponen Fire terdeteksi pada: " + other.name);
 
             DamageType damageType;
             float damageAmount;
@@ -55,17 +125,17 @@ public class WaterParticle : Particle
                     damageAmount = effectiveDamage;
                     break;
                 default:
-                    Debug.Log("No damage applied to fire type: " + fire.fireType);
+                    Debug.Log("Tidak ada damage yang diterapkan pada tipe api: " + fire.fireType);
                     return; // Tidak ada damage untuk jenis api lainnya
             }
 
             // Terapkan damage ke objek api
             fire.TakeDamage(damageAmount, damageType);
-            Debug.Log("Applied " + damageAmount + " damage to " + fire.fireType + " fire. Remaining HP: " + fire.hp);
+            Debug.Log("Diterapkan " + damageAmount + " damage ke api tipe " + fire.fireType + ". HP tersisa: " + fire.hp);
         }
         else
         {
-            Debug.Log("No Fire component found on: " + other.name);
+            Debug.Log("Tidak ditemukan komponen Fire pada: " + other.name);
         }
     }
 }
