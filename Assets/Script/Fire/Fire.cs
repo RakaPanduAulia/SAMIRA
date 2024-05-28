@@ -76,9 +76,9 @@ public class Fire : MonoBehaviour
         }
 
         hp -= finalDamage;
-        if (hp <= 0)
+        if (hp <= 0 && !IsInvoking(nameof(DestroyFire)))
         {
-            Destroy(gameObject);
+            StartCoroutine(DestroyFire());
         }
     }
 
@@ -95,5 +95,11 @@ public class Fire : MonoBehaviour
             default:
                 return damage;
         }
+    }
+
+    private IEnumerator DestroyFire()
+    {
+        yield return new WaitForSeconds(5f); // Wait for 5 seconds
+        Destroy(gameObject);
     }
 }
