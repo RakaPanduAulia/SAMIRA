@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEditor;
 
 public class IconManager : MonoBehaviour
 {
@@ -10,40 +9,31 @@ public class IconManager : MonoBehaviour
     public List<Sprite> icons; // Daftar ikon yang sesuai dengan jenis partikel
     public List<string> particleNames; // Daftar nama skrip partikel
     public List<Color> colors; // Daftar warna yang sesuai dengan jenis partikel
-
-    private void OnEnable()
-    {
-        Selection.selectionChanged += UpdateIcon;
-    }
-
-    private void OnDisable()
-    {
-        Selection.selectionChanged -= UpdateIcon;
-    }
+    public Sprite defaultIcon; // Ikon default
+    public Color defaultColor; // Warna default
 
     private void Start()
     {
-        UpdateIcon();
+        SetDefaultIcon(); // Initialize with the default icon and color
     }
 
-    private void UpdateIcon()
+    public void UpdateIconByParticle(GameObject particle)
     {
-        GameObject activeObject = Selection.activeGameObject;
-        if (activeObject != null)
+        if (particle != null)
         {
-            string activeObjectName = activeObject.GetComponent<Particle>()?.GetType().Name;
-            if (!string.IsNullOrEmpty(activeObjectName))
+            string particleName = particle.GetComponent<Particle>()?.GetType().Name;
+            if (!string.IsNullOrEmpty(particleName))
             {
-                int index = particleNames.IndexOf(activeObjectName);
+                int index = particleNames.IndexOf(particleName);
                 if (index != -1)
                 {
                     iconImage.sprite = icons[index];
                     backgroundImage.color = colors[index];
-                    Debug.Log($"Ikon diperbarui ke: {icons[index].name} dan warna background diperbarui ke: {colors[index]} untuk partikel: {activeObjectName}");
+                    Debug.Log($"Ikon diperbarui ke: {icons[index].name} dan warna background diperbarui ke: {colors[index]} untuk partikel: {particleName}");
                 }
                 else
                 {
-                    Debug.LogError($"Nama partikel {activeObjectName} tidak ditemukan dalam daftar particleNames.");
+                    Debug.LogError($"Nama partikel {particleName} tidak ditemukan dalam daftar particleNames.");
                 }
             }
             else
@@ -53,7 +43,14 @@ public class IconManager : MonoBehaviour
         }
         else
         {
-            Debug.LogError("Tidak ada objek aktif yang dipilih di Inspector.");
+            SetDefaultIcon();
         }
+    }
+
+    public void SetDefaultIcon()
+    {
+        iconImage.sprite = defaultIcon;
+        backgroundImage.color = defaultColor;
+        Debug.Log("Ikon diatur ke default.");
     }
 }
