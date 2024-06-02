@@ -32,7 +32,7 @@ public class UIManager : MonoBehaviour
 
         // Set initial position for each canvas
         Vector3 initialPosition = new Vector3(0, 0, 0); // Adjust this based on your scene setup
-        float spacing = 0.3f; // Adjust the spacing between the canvases
+        float spacing = 0.8f; // Adjust the spacing between the canvases
 
         // Animate each canvas to its new position
         for (int i = 0; i < uiCanvases.Length; i++)
