@@ -114,8 +114,8 @@ public class PowderParticle : Particle
         {
             Debug.Log("Komponen Fire terdeteksi pada: " + other.name);
 
-            DamageType damageType;
-            float damageAmount;
+            DamageType damageType = DamageType.None;
+            float damageAmount = 0f;
 
             // Tentukan jenis damage berdasarkan jenis api (fireType)
             switch (fire.fireType)
@@ -135,12 +135,21 @@ public class PowderParticle : Particle
                     break;
                 default:
                     Debug.Log("Tidak ada damage yang diterapkan pada tipe api: " + fire.fireType);
-                    return; // Tidak ada damage untuk jenis api lainnya
+                    break; // Tidak ada damage untuk jenis api lainnya
             }
+
+            fire.CheckDamageability(damageType);
 
             // Terapkan damage ke objek api
             fire.TakeDamage(damageAmount, damageType);
             Debug.Log("Diterapkan " + damageAmount + " damage ke api tipe " + fire.fireType + ". HP tersisa: " + fire.hp);
+
+            // Periksa jika api telah padam
+            UIManager uiManager = FindObjectOfType<UIManager>();
+            if (uiManager != null)
+            {
+                uiManager.CheckAllFiresExtinguished();
+            }
         }
         else
         {

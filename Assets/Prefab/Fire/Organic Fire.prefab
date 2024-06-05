@@ -323,6 +323,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 0
   fireType: 0
+  isTouched: 0
 --- !u!114 &6703507549389971021
 MonoBehaviour:
   m_ObjectHideFlags: 0

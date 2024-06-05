@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 8653268946732209908}
   - component: {fileID: 5318642947676372126}
   - component: {fileID: 5789956580014381007}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Chemical Fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -247,7 +247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 0
-  fireType: 0
+  fireType: 2
 --- !u!114 &5789956580014381007
 MonoBehaviour:
   m_ObjectHideFlags: 0

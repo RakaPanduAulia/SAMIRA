@@ -7,6 +7,7 @@ public class ButtonApar : MonoBehaviour
     public List<GameObject> particles; // Daftar partikel yang akan diaktifkan dan dinonaktifkan
     public List<Button> buttons; // Daftar tombol untuk mengaktifkan partikel
     private IconManager iconManager;
+    private UIManager uiManager;
 
     private void Start()
     {
@@ -53,5 +54,17 @@ public class ButtonApar : MonoBehaviour
         {
             particle.SetActive(false);
         }
+    }
+
+    public void OnUseButtonClick()
+    {
+        uiManager = FindObjectOfType<UIManager>();
+        if (uiManager == null)
+        {
+            Debug.LogError("UIManager tidak ditemukan di scene.");
+            return;
+        }
+
+        uiManager.UseParticle();
     }
 }
