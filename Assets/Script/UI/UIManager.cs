@@ -84,7 +84,7 @@ public class UIManager : MonoBehaviour
         DeactivateAllCanvases();
     }
 
-    private void DeactivateAllCanvases()
+    public void DeactivateAllCanvases()
     {
         foreach (var canvas in uiCanvases)
         {
