@@ -1229,9 +1229,9 @@ RectTransform:
   - {fileID: 6383183752629901692}
   m_Father: {fileID: 2474096525650448901}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 150, y: -220}
   m_SizeDelta: {x: 300, y: 440}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &984847542889749461
@@ -1419,9 +1419,9 @@ RectTransform:
   - {fileID: 4874081943522013543}
   m_Father: {fileID: 9182887038301777812}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 150, y: -220}
   m_SizeDelta: {x: 300, y: 440}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1087592963289970981
@@ -4018,7 +4018,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7884151847566776895}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlaySFX
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &8950784171978718910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5078,7 +5090,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2474096525650448901
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5100,7 +5112,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: -0.753, y: 0}
-  m_SizeDelta: {x: 300, y: 0}
+  m_SizeDelta: {x: 300, y: 440}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &8037691263923851205
 Canvas:
@@ -5733,9 +5745,9 @@ RectTransform:
   - {fileID: 3407073278282457998}
   m_Father: {fileID: 2803669961535953768}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 150, y: -220}
   m_SizeDelta: {x: 300, y: 440}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &4780631423172790260
@@ -7594,7 +7606,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8154808764143472511}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlaySFX
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &619725837716159037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8116,7 +8140,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 1.001, y: 1.247, z: 0.007}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.40603003, y: 0.541092, z: 0.40603003}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 516717011706795803}
@@ -8724,7 +8748,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &9182887038301777812
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8746,7 +8770,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 1.4599999, y: 0}
-  m_SizeDelta: {x: 300, y: 0}
+  m_SizeDelta: {x: 300, y: 440}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &2848019943430791945
 Canvas:
@@ -8931,7 +8955,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2803669961535953768
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8953,7 +8977,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: -0.011, y: 0}
-  m_SizeDelta: {x: 300, y: 0}
+  m_SizeDelta: {x: 300, y: 440}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &6597987567071834197
 Canvas:
@@ -9210,7 +9234,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7786497934654067568}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlaySFX
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &107236994442449019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10029,7 +10065,19 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 65d31ca9600c4654e886aa7bab36e94b, type: 3}
     - target: {fileID: 4889970071735611984, guid: dda7da62615855e40a45fbbeadf3c49e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4889970071735611984, guid: dda7da62615855e40a45fbbeadf3c49e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4889970071735611984, guid: dda7da62615855e40a45fbbeadf3c49e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlaySFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 4889970071735611984, guid: dda7da62615855e40a45fbbeadf3c49e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4889970071735611998, guid: dda7da62615855e40a45fbbeadf3c49e, type: 3}
       propertyPath: m_Name
@@ -10041,7 +10089,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4889970071804425952, guid: dda7da62615855e40a45fbbeadf3c49e, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 440
       objectReference: {fileID: 0}
     - target: {fileID: 4889970071804425952, guid: dda7da62615855e40a45fbbeadf3c49e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10061,7 +10109,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4889970071804425962, guid: dda7da62615855e40a45fbbeadf3c49e, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4889970071923956889, guid: dda7da62615855e40a45fbbeadf3c49e, type: 3}
       propertyPath: m_text
@@ -10072,16 +10120,28 @@ PrefabInstance:
       value: APAR Select
       objectReference: {fileID: 0}
     - target: {fileID: 4889970071943557629, guid: dda7da62615855e40a45fbbeadf3c49e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.557872
+      objectReference: {fileID: 0}
+    - target: {fileID: 4889970071943557629, guid: dda7da62615855e40a45fbbeadf3c49e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.557872
+      objectReference: {fileID: 0}
+    - target: {fileID: 4889970071943557629, guid: dda7da62615855e40a45fbbeadf3c49e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.557872
+      objectReference: {fileID: 0}
+    - target: {fileID: 4889970071943557629, guid: dda7da62615855e40a45fbbeadf3c49e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.61
       objectReference: {fileID: 0}
     - target: {fileID: 4889970071943557629, guid: dda7da62615855e40a45fbbeadf3c49e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.089103
       objectReference: {fileID: 0}
     - target: {fileID: 4889970071943557629, guid: dda7da62615855e40a45fbbeadf3c49e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 4889970071943557629, guid: dda7da62615855e40a45fbbeadf3c49e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -10173,19 +10233,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7550878626722725120, guid: dda7da62615855e40a45fbbeadf3c49e, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7550878626722725120, guid: dda7da62615855e40a45fbbeadf3c49e, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7550878626722725120, guid: dda7da62615855e40a45fbbeadf3c49e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 7550878626722725120, guid: dda7da62615855e40a45fbbeadf3c49e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -220
       objectReference: {fileID: 0}
     - target: {fileID: 8727155143665860821, guid: dda7da62615855e40a45fbbeadf3c49e, type: 3}
       propertyPath: m_SizeDelta.y
@@ -10193,7 +10253,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8801156356007179928, guid: dda7da62615855e40a45fbbeadf3c49e, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8801156356007179928, guid: dda7da62615855e40a45fbbeadf3c49e, type: 3}
       propertyPath: m_TargetOffset.y

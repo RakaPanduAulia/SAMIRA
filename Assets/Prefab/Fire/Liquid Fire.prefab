@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1183410712759533045}
   - component: {fileID: 6883210554508563255}
   - component: {fileID: 4405454458536202489}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Hp Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 8368491093173720697}
   - component: {fileID: 3128136932437672288}
   - component: {fileID: 587753676052107704}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Inner Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -161,7 +161,7 @@ GameObject:
   - component: {fileID: 4069786378520915000}
   - component: {fileID: 7487285442845869942}
   - component: {fileID: 1050976642815130614}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -239,7 +239,7 @@ GameObject:
   - component: {fileID: 1316523997850373443}
   - component: {fileID: 714504604405627816}
   - component: {fileID: 4873076007875944090}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Liquid Fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -380,7 +380,7 @@ GameObject:
   - component: {fileID: 903515211592081419}
   - component: {fileID: 8248576010873566042}
   - component: {fileID: 1537165930710691100}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Health Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -503,7 +503,7 @@ GameObject:
   - component: {fileID: 2696672166265572808}
   - component: {fileID: 9186709340358937476}
   - component: {fileID: 539893962251076760}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Type Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -655,6 +655,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6667402393872249569, guid: 8206b722d11501a449d6a278cca2adfa, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -8026598985918126434, guid: d8c8a29a94f14aa4c9c4eb37c6bb9941, type: 2}
     - target: {fileID: 6860310887368847533, guid: 8206b722d11501a449d6a278cca2adfa, type: 3}
       propertyPath: m_IsActive
       value: 1
