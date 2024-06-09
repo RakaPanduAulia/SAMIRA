@@ -3970,6 +3970,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XR Device Simulator
       objectReference: {fileID: 0}
+    - target: {fileID: 6598815579406187037, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5851,7 +5855,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 20632444820450949, guid: 42d8c02fc4c90ba4e8e470ed8ca460ea, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 69193347358455302, guid: 42d8c02fc4c90ba4e8e470ed8ca460ea, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -5859,7 +5863,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 91805893662191195, guid: 42d8c02fc4c90ba4e8e470ed8ca460ea, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 649664443138498091, guid: 42d8c02fc4c90ba4e8e470ed8ca460ea, type: 3}
       propertyPath: m_SizeDelta.y
@@ -5985,6 +5989,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 86
       objectReference: {fileID: 0}
+    - target: {fileID: 1450339306539540129, guid: 42d8c02fc4c90ba4e8e470ed8ca460ea, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -540
+      objectReference: {fileID: 0}
     - target: {fileID: 1454566453012477642, guid: 42d8c02fc4c90ba4e8e470ed8ca460ea, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -6033,9 +6041,45 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2583247513412015167, guid: 42d8c02fc4c90ba4e8e470ed8ca460ea, type: 3}
+      propertyPath: m_text
+      value: CO2 or gas-type fire extinguishers are very effective on fires caused
+        by liquids and electrical materials, but ineffective on fires caused by gaseous
+        materials and very ineffective on fires caused by organic materials. This
+        type of fire extinguisher can be recognized by its black markings, which
+        distinguish it from other types of fire extinguishers.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2583247513412015167, guid: 42d8c02fc4c90ba4e8e470ed8ca460ea, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2813679924374097755, guid: 42d8c02fc4c90ba4e8e470ed8ca460ea, type: 3}
       propertyPath: m_Name
       value: BGM Volume
+      objectReference: {fileID: 0}
+    - target: {fileID: 3266718355699776726, guid: 42d8c02fc4c90ba4e8e470ed8ca460ea, type: 3}
+      propertyPath: m_text
+      value: Foam-type fire extinguishers are very effective for fires caused by
+        liquid materials but are not effective on fires caused by organic materials.
+        However, it is dangerous to use this type of extinguisher on fires caused
+        by electricity and gas. This type of fire extinguisher can be recognized
+        by its orange markings, which distinguish it from other types of fire extinguishers.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3266718355699776726, guid: 42d8c02fc4c90ba4e8e470ed8ca460ea, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3378164300185086147, guid: 42d8c02fc4c90ba4e8e470ed8ca460ea, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 384.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3378164300185086147, guid: 42d8c02fc4c90ba4e8e470ed8ca460ea, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 152.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3378164300185086147, guid: 42d8c02fc4c90ba4e8e470ed8ca460ea, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -524
       objectReference: {fileID: 0}
     - target: {fileID: 3409798423596861318, guid: 42d8c02fc4c90ba4e8e470ed8ca460ea, type: 3}
       propertyPath: m_SizeDelta.y
@@ -6060,6 +6104,22 @@ PrefabInstance:
     - target: {fileID: 3631902112335909239, guid: 42d8c02fc4c90ba4e8e470ed8ca460ea, type: 3}
       propertyPath: m_Name
       value: SFX Volume
+      objectReference: {fileID: 0}
+    - target: {fileID: 3732896639468918719, guid: 42d8c02fc4c90ba4e8e470ed8ca460ea, type: 3}
+      propertyPath: m_text
+      value: A water-type fire extinguisher is very effective against fires caused
+        by organic materials. However, it is dangerous to use this type of extinguisher
+        on fires caused by electricity. This type of fire extinguisher can be identified
+        by its red markings and white stripes, which differentiate it from other
+        types of fire extinguishers.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3732896639468918719, guid: 42d8c02fc4c90ba4e8e470ed8ca460ea, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3877615711429492952, guid: 42d8c02fc4c90ba4e8e470ed8ca460ea, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -531
       objectReference: {fileID: 0}
     - target: {fileID: 3937835713149057110, guid: 42d8c02fc4c90ba4e8e470ed8ca460ea, type: 3}
       propertyPath: m_SizeDelta.y
@@ -6203,7 +6263,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5295909780891059047, guid: 42d8c02fc4c90ba4e8e470ed8ca460ea, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5454561860696738023, guid: 42d8c02fc4c90ba4e8e470ed8ca460ea, type: 3}
       propertyPath: m_Type
@@ -6244,6 +6304,10 @@ PrefabInstance:
     - target: {fileID: 6062400262852617146, guid: 42d8c02fc4c90ba4e8e470ed8ca460ea, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6430122522053481009, guid: 42d8c02fc4c90ba4e8e470ed8ca460ea, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -529
       objectReference: {fileID: 0}
     - target: {fileID: 6459563633689926856, guid: 42d8c02fc4c90ba4e8e470ed8ca460ea, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -6377,6 +6441,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7328392450981261495, guid: 42d8c02fc4c90ba4e8e470ed8ca460ea, type: 3}
+      propertyPath: m_text
+      value: Powder fire extinguishers are very effective for fires caused by organic
+        materials but cause corrosion. They are ineffective for fires caused by gas
+        and liquid materials, and very ineffective for fires caused by electrical
+        materials. This type of fire extinguisher can be recognized by its blue markings,
+        which distinguish it from other types of fire extinguishers.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7328392450981261495, guid: 42d8c02fc4c90ba4e8e470ed8ca460ea, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7332699874905286635, guid: 42d8c02fc4c90ba4e8e470ed8ca460ea, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -6455,7 +6531,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8169395753997738419, guid: 42d8c02fc4c90ba4e8e470ed8ca460ea, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8169395753997738425, guid: 42d8c02fc4c90ba4e8e470ed8ca460ea, type: 3}
       propertyPath: m_SizeDelta.y
