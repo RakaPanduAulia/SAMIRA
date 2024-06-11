@@ -1,28 +1,23 @@
-using System.Collections.Generic;
 using UnityEngine;
+using System.Collections.Generic;
 
-public class FireSpawner : MonoBehaviour
+public class RoomRecognitionAndSpawn : MonoBehaviour
 {
     public List<GameObject> firePrefabs;
-    public Transform playerTransform; // Reference to the player's transform
-    public float minDistanceFromPlayer = 0.5f;
-    public float maxDistanceFromPlayer = 3.0f;
     public float minimumDistanceBetweenFires = 1.0f;
     public LayerMask floorLayerMask; // Layer mask to identify floor surfaces
     private List<Vector3> spawnPositions = new List<Vector3>();
 
-    public List<GameObject> currentFireObjects { get; private set; } = new List<GameObject>(); // Daftar objek api saat ini di scene
-
     void Start()
     {
-        Debug.Log("RoomRecognitionAndFireSpawner started");
+        Debug.Log("RoomRecognitionAndSpawn started");
+        // Simulate the room recognition by raycasting
+        SimulateRoomRecognition();
     }
 
-    public void SimulateRoomRecognition()
+    private void SimulateRoomRecognition()
     {
         int spawnCount = 0;
-        spawnPositions.Clear();
-        currentFireObjects.Clear();
         // This example uses raycasting to detect the floor and spawn fires
         for (int i = 0; i < firePrefabs.Count; i++) // Ensure all firePrefabs are spawned
         {
@@ -39,8 +34,7 @@ public class FireSpawner : MonoBehaviour
                     Vector3 spawnPoint = hit.point;
                     if (IsValidPosition(spawnPoint))
                     {
-                        GameObject fireInstance = Instantiate(firePrefabs[i], spawnPoint, Quaternion.identity);
-                        currentFireObjects.Add(fireInstance);
+                        Instantiate(firePrefabs[i], spawnPoint, Quaternion.identity);
                         spawnPositions.Add(spawnPoint);
                         Debug.Log("Fire spawned at position: " + spawnPoint);
                         spawned = true;
@@ -75,54 +69,6 @@ public class FireSpawner : MonoBehaviour
                 return false;
             }
         }
-
-        // Check distance from player
-        float distanceFromPlayer = Vector3.Distance(position, playerTransform.position);
-        if (distanceFromPlayer < minDistanceFromPlayer || distanceFromPlayer > maxDistanceFromPlayer)
-        {
-            return false;
-        }
-
-
         return true;
-    }
-
-    public void DeactivateAllFires()
-    {
-        foreach (var fire in currentFireObjects)
-        {
-            if (fire != null)
-            {
-                fire.SetActive(false);
-            }
-        }
-    }
-
-    public void RespawnFires()
-    {
-        foreach (var fire in currentFireObjects)
-        {
-            if (fire != null)
-            {
-                Destroy(fire);
-            }
-        }
-        SimulateRoomRecognition();
-    }
-
-    public void DestroyRemainingFires()
-    {
-        for (int i = 0; i < currentFireObjects.Count; i++)
-        {
-            if (currentFireObjects[i] != null)
-            {
-                Fire fireComponent = currentFireObjects[i].GetComponent<Fire>();
-                if (fireComponent != null && !fireComponent.canTakeDamage)
-                {
-                    Destroy(currentFireObjects[i]);
-                    currentFireObjects[i] = null; // Set to null so it can be respawned later
-                }
-            }
-        }
     }
 }
